@@ -195,7 +195,7 @@ class AdaptiveNavigationScaffold extends StatelessWidget {
     );
   }
 
-  Widget _buildBottomNavigationScaffold() {
+ Widget _buildBottomNavigationScaffold() {
     const int bottomNavigationOverflow = 5;
     final bottomDestinations = destinations.sublist(
       0,
@@ -206,18 +206,22 @@ class AdaptiveNavigationScaffold extends StatelessWidget {
             includeBaseDestinationsInMenu ? 0 : bottomNavigationOverflow)
         : <AdaptiveScaffoldDestination>[];
     return Scaffold(
-      key: key,
       body: body,
       appBar: appBar,
       drawer: drawerDestinations.isEmpty
           ? null
           : _defaultDrawer(drawerDestinations),
       bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        unselectedItemColor: Colors.grey[700],
+        selectedItemColor: al_style.alBlueDark,
         items: [
           for (final destination in bottomDestinations)
             BottomNavigationBarItem(
               icon: Icon(destination.icon),
-              label: destination.title,
+              // label: destination.title,
+              label: ''
             ),
         ],
         currentIndex: selectedIndex,

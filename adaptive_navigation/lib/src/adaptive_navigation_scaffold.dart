@@ -215,7 +215,7 @@ class AdaptiveNavigationScaffold extends StatelessWidget {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         unselectedItemColor: Colors.grey[700],
-        selectedItemColor: al_style.alBlueDark,
+        selectedItemColor: Color.fromARGB(255, 21, 63, 122);,
         items: [
           for (final destination in bottomDestinations)
             BottomNavigationBarItem(

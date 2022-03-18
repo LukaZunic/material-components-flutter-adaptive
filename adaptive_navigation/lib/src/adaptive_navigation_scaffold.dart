@@ -217,13 +217,13 @@ class AdaptiveNavigationScaffold extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: (appTheme == 'light') ?
             const Color(0xFFFFFFFF)
-              : const Color.fromARGB(255, 21, 63, 122),
+              : const Color.fromARGB(255, 8, 36, 99),
         showSelectedLabels: false,
         showUnselectedLabels: false,
         unselectedItemColor:
           (appTheme == 'light') ?
             Colors.grey[700]
-              : const Color.fromARGB(255, 17, 122, 198),
+              : const Color.fromARGB(255, 9, 97, 164),
         selectedItemColor: (appTheme == 'light') ?
             const Color.fromARGB(255, 21, 63, 122)
               : const Color(0xFFFFFFFF),

@@ -212,10 +212,11 @@ class AdaptiveNavigationScaffold extends StatelessWidget {
           ? null
           : _defaultDrawer(drawerDestinations),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color.fromARGB(255, 21, 63, 122),
         showSelectedLabels: false,
         showUnselectedLabels: false,
         unselectedItemColor: Colors.grey[700],
-        selectedItemColor: Color.fromARGB(255, 21, 63, 122),
+        selectedItemColor: const Color.fromARGB(255, 21, 63, 122),
         items: [
           for (final destination in bottomDestinations)
             BottomNavigationBarItem(

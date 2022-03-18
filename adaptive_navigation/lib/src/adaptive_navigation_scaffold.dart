@@ -45,6 +45,7 @@ class AdaptiveNavigationScaffold extends StatelessWidget {
   const AdaptiveNavigationScaffold({
     Key? key,
     this.appBar,
+    this.appTheme,
     required this.body,
     this.floatingActionButton,
     this.floatingActionButtonLocation,
@@ -73,6 +74,8 @@ class AdaptiveNavigationScaffold extends StatelessWidget {
 
   /// See [Scaffold.appBar].
   final PreferredSizeWidget? appBar;
+
+  final String? appTheme;
 
   /// See [Scaffold.body].
   final Widget body;
@@ -212,7 +215,9 @@ class AdaptiveNavigationScaffold extends StatelessWidget {
           ? null
           : _defaultDrawer(drawerDestinations),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 21, 63, 122),
+        backgroundColor: (appTheme == 'light') ?
+            const Color.fromARGB(255, 0, 0, 0)
+              : const Color.fromARGB(255, 21, 63, 122),
         showSelectedLabels: false,
         showUnselectedLabels: false,
         unselectedItemColor: Colors.grey[700],
